@@ -1,0 +1,102 @@
+[
+    {
+        "data": "2026-11-09T11:46:35",
+        "origem": "pergunta",
+        "pergunta": "como criar uma conta no gov.com?",
+        "id_orientacao": null,
+        "encontrou": false,
+        "ajudou": false,
+        "tentativas": 1,
+        "tempo_segundos": 63.0
+    },
+    {
+        "data": "2026-11-09T11:46:49",
+        "origem": "pergunta",
+        "pergunta": "Como criar uma conta gov.br?",
+        "id_orientacao": 1,
+        "encontrou": true,
+        "ajudou": true,
+        "tentativas": 1,
+        "tempo_segundos": 12.4
+    },
+    {
+        "data": "2026-11-09T11:47:11",
+        "origem": "categoria",
+        "pergunta": "Fazer inscrição no Cadastro Único",
+        "id_orientacao": 8,
+        "encontrou": true,
+        "ajudou": false,
+        "tentativas": 1,
+        "tempo_segundos": 12.2
+    },
+    {
+        "data": "2026-11-09T12:13:48",
+        "origem": "categoria",
+        "pergunta": "Registrar reclamação no Consumidor.gov.br",
+        "id_orientacao": 9,
+        "encontrou": true,
+        "ajudou": false,
+        "tentativas": 1,
+        "tempo_segundos": 1592.8
+    },
+    {
+        "data": "2026-11-09T12:31:13",
+        "origem": "categoria",
+        "pergunta": "Fazer inscrição no Cadastro Único",
+        "id_orientacao": 8,
+        "encontrou": true,
+        "ajudou": false,
+        "tentativas": 1,
+        "tempo_segundos": 3.5
+    },
+    {
+        "data": "2026-11-09T12:31:32",
+        "origem": "categoria",
+        "pergunta": "Fazer inscrição no Cadastro Único",
+        "id_orientacao": 8,
+        "encontrou": true,
+        "ajudou": true,
+        "tentativas": 1,
+        "tempo_segundos": 16.8
+    },
+    {
+        "data": "2026-11-09T12:31:55",
+        "origem": "categoria",
+        "pergunta": "Solicitar o primeiro título de eleitor",
+        "id_orientacao": 3,
+        "encontrou": true,
+        "ajudou": true,
+        "tentativas": 1,
+        "tempo_segundos": 10.1
+    },
+    {
+        "data": "2026-11-09T15:56:04",
+        "origem": "categoria",
+        "pergunta": "Acessar a Carteira de Trabalho Digital",
+        "id_orientacao": 2,
+        "encontrou": true,
+        "ajudou": true,
+        "tentativas": 1,
+        "tempo_segundos": 8.0
+    },
+    {
+        "data": "2026-11-09T15:57:38",
+        "origem": "categoria",
+        "pergunta": "Fazer inscrição no Cadastro Único",
+        "id_orientacao": 8,
+        "encontrou": true,
+        "ajudou": true,
+        "tentativas": 1,
+        "tempo_segundos": 27.2
+    },
+    {
+        "data": "2026-11-09T15:58:39",
+        "origem": "categoria",
+        "pergunta": "Registrar reclamação no Consumidor.gov.br",
+        "id_orientacao": 9,
+        "encontrou": true,
+        "ajudou": true,
+        "tentativas": 1,
+        "tempo_segundos": 2.0
+    }
+]

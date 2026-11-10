@@ -1,0 +1,5 @@
+Nome do assistente: Citizen Assist AI
+Público atendido: Jovens que precisam de orientação sobre documentos, emprego, saúde e serviços públicos.
+Integrantes e RM:Thiago Maluf Hofmann — RM:569852 - Pedro Yoshikado Garcia — RM:570449 - Pedro Andreassa Zamai — RM:569318
+Link do repositório GitHub: PREENCHER
+Link do vídeo técnico no YouTube: PREENCHER
