@@ -79,4 +79,4 @@ Teste realizado com **3 participantes** de fora da equipe, totalizando **11 aten
 - Pedro Andreassa Zamai — RM: 569318
 
 ## 12. Vídeo técnico
-Link do vídeo não listado no YouTube: **PREENCHER**
+Link do vídeo não listado no YouTube: https://youtu.be/5Qy40hJMhCY
