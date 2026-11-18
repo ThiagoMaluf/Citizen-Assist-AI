@@ -4,7 +4,6 @@ import os
 import re
 import time
 from datetime import datetime
-from base_conhecimento import normalizar
 
 
 class Assistente:
@@ -24,66 +23,86 @@ class Assistente:
             self.historico = []
 
     def dado_pessoal(self, texto):
-        return "@" in texto or bool(re.search(r"\\d{8,}", texto))
+        apenas_digitos = re.sub(r"\D", "", texto)
+        return "@" in texto or len(apenas_digitos) >= 8
 
     def perguntar(self):
         inicio = time.time()
-        tentativas = 1
-        pergunta = input("\nDigite sua dúvida (0 para voltar): ").strip()
-
-        if pergunta == "0":
-            return
-        if not pergunta:
-            print("Digite uma pergunta para continuar.")
-            return
-        if self.dado_pessoal(pergunta):
-            print("Atenção: não digite CPF, telefone, e-mail ou outros dados pessoais. Reescreva.")
-            return
-
-        resultados = self.base.buscar(pergunta)
-        encontrados = [item for item in resultados if item[0] >= 3]
-
-        ajudou = None
+        tentativas = 0
+        ultima_pergunta = ""
         id_orientacao = None
-        encontrou = bool(encontrados)
+        encontrou = False
+        ajudou = False
 
-        if encontrou:
-            pontos, orientacao = encontrados[0]
-            id_orientacao = orientacao.id
-            confianca = "ALTA" if pontos >= 6 else "MÉDIA"
-            print(f"\nConfiança da resposta: {confianca} ({pontos} pontos)")
-            orientacao.exibir()
+        while True:
+            pergunta = input("\nDigite sua dúvida (0 para voltar): ").strip()
 
-            for pontos_alt, alternativa in encontrados[1:3]:
-                print(f"Alternativa: {alternativa.titulo} ({pontos_alt} pontos)")
+            if pergunta == "0":
+                if tentativas > 0:
+                    self.registrar({
+                        "data": datetime.now().isoformat(timespec="seconds"),
+                        "origem": "pergunta",
+                        "pergunta": ultima_pergunta,
+                        "id_orientacao": id_orientacao,
+                        "encontrou": encontrou,
+                        "ajudou": False,
+                        "tentativas": tentativas,
+                        "tempo_segundos": round(time.time() - inicio, 1)
+                    })
+                return
 
-            while True:
-                resposta = input("\nEssa orientação respondeu sua dúvida? (s/n): ").strip().lower()
-                if resposta in ("s", "n"):
-                    ajudou = resposta == "s"
-                    break
-                print("Entrada inválida. Digite apenas s ou n.")
-        else:
-            print("\nNão encontrei uma orientação com confiança suficiente.")
-            print("Tente outras palavras ou navegue pelas categorias.")
-            while True:
-                resposta = input("Essa busca ajudou? (s/n): ").strip().lower()
-                if resposta in ("s", "n"):
-                    ajudou = resposta == "s"
-                    break
-                print("Entrada inválida. Digite apenas s ou n.")
+            if not pergunta:
+                print("Digite uma pergunta para continuar.")
+                continue
 
-        registro = {
-            "data": datetime.now().isoformat(timespec="seconds"),
-            "origem": "pergunta",
-            "pergunta": pergunta,
-            "id_orientacao": id_orientacao,
-            "encontrou": encontrou,
-            "ajudou": ajudou,
-            "tentativas": tentativas,
-            "tempo_segundos": round(time.time() - inicio, 1)
-        }
-        self.registrar(registro)
+            if self.dado_pessoal(pergunta):
+                print("Atenção: não digite CPF, telefone, e-mail ou outros dados pessoais. Reescreva.")
+                continue
+
+            tentativas += 1
+            ultima_pergunta = pergunta
+            resultados = self.base.buscar(pergunta)
+            encontrados = [item for item in resultados if item[0] >= 3]
+
+            encontrou = bool(encontrados)
+            id_orientacao = None
+
+            if encontrou:
+                pontos, orientacao = encontrados[0]
+                id_orientacao = orientacao.id
+                confianca = "ALTA" if pontos >= 6 else "MÉDIA"
+                print(f"\nConfiança da resposta: {confianca} ({pontos} pontos)")
+                orientacao.exibir()
+
+                for pontos_alt, alternativa in encontrados[1:3]:
+                    print(f"Alternativa: {alternativa.titulo} ({pontos_alt} pontos)")
+
+                while True:
+                    resposta = input("\nEssa orientação respondeu sua dúvida? (s/n): ").strip().lower()
+                    if resposta in ("s", "n"):
+                        ajudou = resposta == "s"
+                        break
+                    print("Entrada inválida. Digite apenas s ou n.")
+            else:
+                print("\nNão encontrei uma orientação com confiança suficiente.")
+                print("Tente reformular com outras palavras, navegue pelas categorias ou digite 0 para voltar.")
+                ajudou = False
+
+            if ajudou:
+                self.registrar({
+                    "data": datetime.now().isoformat(timespec="seconds"),
+                    "origem": "pergunta",
+                    "pergunta": ultima_pergunta,
+                    "id_orientacao": id_orientacao,
+                    "encontrou": encontrou,
+                    "ajudou": True,
+                    "tentativas": tentativas,
+                    "tempo_segundos": round(time.time() - inicio, 1)
+                })
+                return
+
+            if encontrou:
+                print("Tudo bem! Tente reformular sua pergunta com outras palavras ou digite 0 para voltar.")
 
     def navegar(self):
         categorias = self.base.categorias()
@@ -140,16 +159,20 @@ class Assistente:
                     "tempo_segundos": round(time.time() - inicio, 1)
                 })
 
+                if ajudou:
+                    return
+
     def registrar(self, registro):
         self.historico.append(registro)
         os.makedirs("data", exist_ok=True)
         with open(self.arquivo_historico, "w", encoding="utf-8") as arquivo:
             json.dump(self.historico, arquivo, ensure_ascii=False, indent=4)
+        self.exportar_csv(silencioso=True)
 
     def indicadores(self, facilidade=None):
         total = len(self.historico)
         if total == 0:
-            print("\nNenhum atendimento registrado nesta execução.")
+            print("\nNenhum atendimento registrado ainda.")
             return
 
         encontrados = sum(1 for item in self.historico if item["encontrou"])
@@ -159,6 +182,7 @@ class Assistente:
         sem_solucao = [item["pergunta"] for item in self.historico if item["ajudou"] is False]
 
         print("\n--- INDICADORES ---")
+        print(f"Total de atendimentos: {total}")
         print(f"Resposta encontrada: {encontrados / total * 100:.1f}%")
         print(f"Taxa de acerto (ajudou): {ajudou / total * 100:.1f}%")
         print(f"Tempo médio por atendimento: {tempo:.1f} segundos")
@@ -172,7 +196,7 @@ class Assistente:
         else:
             print("- Nenhuma registrada.")
 
-    def exportar_csv(self):
+    def exportar_csv(self, silencioso=False):
         os.makedirs("data", exist_ok=True)
         campos = ["data", "origem", "pergunta", "id_orientacao", "encontrou",
                   "ajudou", "tentativas", "tempo_segundos"]
@@ -180,4 +204,5 @@ class Assistente:
             escritor = csv.DictWriter(arquivo, fieldnames=campos)
             escritor.writeheader()
             escritor.writerows(self.historico)
-        print("Atendimentos exportados para data/atendimentos.csv")
+        if not silencioso:
+            print("Atendimentos exportados para data/atendimentos.csv")

@@ -1,1 +1,12 @@
 ﻿data,origem,pergunta,id_orientacao,encontrou,ajudou,tentativas,tempo_segundos
+2026-11-14T22:50:35,pergunta,Como fazer a inscrição pro enem,,False,False,3,58.9
+2026-11-14T22:53:19,pergunta,Consigo consultar meu tempo de trabalho para aposentar pela carteira de trabalho?,7,True,True,1,32.0
+2026-11-14T22:53:39,pergunta,Onde posso ver minhas vacinas,5,True,True,1,8.7
+2026-11-14T22:53:49,categoria,"Inscrever-se no ENEM, SISU, Prouni ou Fies e emitir ID Estudantil",20,True,True,1,1.8
+2026-11-14T22:54:20,pergunta,A partir de quantos anos eu posso fazer o enem,20,True,True,1,25.4
+2026-11-14T22:56:11,pergunta,Comprei um produto com defeito e a empresa nao resolve,19,True,True,3,47.6
+2026-11-14T22:56:37,pergunta,Onde vejo as carteiras e documentos digitais no celular,2,True,True,1,20.3
+2026-11-14T22:57:06,pergunta,Como faco a carteirinha do sus,2,True,True,1,10.5
+2026-11-14T22:57:31,pergunta,Como tirar meu primeiro titulo de eleitor,12,True,True,1,13.7
+2026-11-14T22:58:05,pergunta,Como tirar a carteira de trabalho,7,True,True,3,33.8
+2026-11-14T22:58:18,categoria,Consultar saldo e saque do FGTS e PIS/PASEP,9,True,True,1,1.6

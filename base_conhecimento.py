@@ -4,11 +4,20 @@ import unicodedata
 from orientacao import Orientacao
 
 
+STOPWORDS = {"de", "do", "da", "dos", "das", "no", "na", "nos", "nas", "em", "o", "a", "os", "as", "um", "uma", "para", "pra", "com", "que", "como", "onde", "qual"}
+
+
 def normalizar(texto):
     texto = unicodedata.normalize("NFD", texto.lower().strip())
     texto = "".join(letra for letra in texto if unicodedata.category(letra) != "Mn")
     texto = re.sub(r"[^a-z0-9 ]", " ", texto)
     return " " + " ".join(texto.split()) + " "
+
+
+def radical(palavra):
+    if len(palavra) > 4 and palavra.endswith("s"):
+        return palavra[:-1]
+    return palavra
 
 
 class BaseConhecimento:
@@ -38,16 +47,24 @@ class BaseConhecimento:
     def pontuar(self, pergunta, orientacao):
         pergunta_n = normalizar(pergunta)
         titulo_n = normalizar(orientacao.titulo)
+        tokens_pergunta = [radical(p) for p in pergunta_n.split() if p not in STOPWORDS]
+        set_pergunta = set(tokens_pergunta)
         pontos = 0
 
         for palavra in orientacao.palavras_chave:
             chave_n = normalizar(palavra).strip()
-            if chave_n and (" " + chave_n + " ") in pergunta_n:
-                pontos += 3
+            if not chave_n:
+                continue
 
-        palavras_pergunta = set(pergunta_n.split())
-        palavras_titulo = set(titulo_n.split())
-        for palavra in palavras_pergunta:
+            if (" " + chave_n + " ") in pergunta_n:
+                pontos += 3
+            else:
+                tokens_chave = [radical(p) for p in chave_n.split() if p not in STOPWORDS]
+                if tokens_chave and all(tk in set_pergunta for tk in tokens_chave):
+                    pontos += 3
+
+        palavras_titulo = {radical(p) for p in titulo_n.split() if len(p) >= 4 and p not in STOPWORDS}
+        for palavra in set_pergunta:
             if len(palavra) >= 4 and palavra in palavras_titulo:
                 pontos += 1
 

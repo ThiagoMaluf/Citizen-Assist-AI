@@ -2,189 +2,461 @@
     {
         "id": 1,
         "categoria": "Documentação",
-        "titulo": "Criar uma conta gov.br",
+        "titulo": "Criar ou recuperar uma conta gov.br",
         "palavras_chave": [
-            "conta gov br",
+            "conta gov",
+            "gov br",
+            "gov com",
             "criar conta",
             "cadastro gov",
-            "login governo"
+            "login governo",
+            "senha gov",
+            "nivel prata",
+            "nivel ouro",
+            "acesso gov"
         ],
-        "resposta": "A conta gov.br pode ser criada gratuitamente pelo aplicativo gov.br ou pelo site oficial. No site, escolha 'Criar conta gov.br' e siga as instruções. Alguns serviços exigem nível Prata ou Ouro.",
+        "resposta": "A conta gov.br pode ser criada gratuitamente pelo aplicativo gov.br ou pelo site oficial. Escolha 'Criar conta gov.br', informe seu CPF e siga as etapas de validação. Alguns serviços exigem conta nível Prata ou Ouro (liberada por reconhecimento facial ou internet banking).",
         "documentos": [
             "CPF",
-            "E-mail ou telefone celular para ativação, conforme o fluxo apresentado"
+            "E-mail ou telefone celular para ativação"
         ],
         "onde": "Aplicativo gov.br ou https://www.gov.br/pt-br/servicos/criar-sua-conta-gov.br",
         "fonte": "https://www.gov.br/pt-br/servicos/criar-sua-conta-gov.br",
-        "verificado_em": "2026-11-09"
+        "verificado_em": "2026-11-14"
     },
     {
         "id": 2,
-        "categoria": "Emprego",
-        "titulo": "Acessar a Carteira de Trabalho Digital",
+        "categoria": "Documentação",
+        "titulo": "Consultar todas as carteiras e documentos digitais no celular",
         "palavras_chave": [
-            "carteira de trabalho digital",
-            "ctps digital",
-            "carteira trabalho",
-            "trabalho aplicativo"
+            "minhas carteiras",
+            "carteiras digitais",
+            "carteirinhas",
+            "documentos digitais",
+            "consultar carteiras",
+            "ver documentos",
+            "documento celular",
+            "carteira digital",
+            "app gov"
         ],
-        "resposta": "A Carteira de Trabalho Digital já é emitida para quem possui CPF. Para acessá-la, instale o aplicativo Carteira de Trabalho Digital ou use o serviço pela internet e entre com sua conta gov.br.",
+        "resposta": "Você pode consultar suas carteiras digitais (como RG/CIN, CNH, Cartão SUS, Título de Eleitor e Carteira de Trabalho) diretamente no aplicativo gov.br (na aba 'Carteira de documentos') ou nos aplicativos oficiais de cada órgão (Meu SUS Digital, Carteira Digital de Trânsito, e-Título e CTPS Digital).",
+        "documentos": [
+            "CPF",
+            "Conta gov.br (nível Prata ou Ouro para alguns documentos)"
+        ],
+        "onde": "Aplicativo gov.br (seção Carteira de Documentos) e apps oficiais do Governo Federal",
+        "fonte": "https://www.gov.br/governodigital/pt-br/identidade/carteira-de-documentos",
+        "verificado_em": "2026-11-14"
+    },
+    {
+        "id": 3,
+        "categoria": "Saúde",
+        "titulo": "Atendimento pelo SUS mesmo tendo plano de saúde privado",
+        "palavras_chave": [
+            "plano de saude",
+            "plano saude",
+            "convenio",
+            "convenio medico",
+            "posso usar sus",
+            "consultar sus",
+            "atendimento sus",
+            "tenho plano",
+            "ubs",
+            "posto de saude"
+        ],
+        "resposta": "Sim! O Sistema Único de Saúde (SUS) é universal e gratuito para toda a população no Brasil, mesmo para quem possui plano de saúde ou convênio particular. Você pode tomar vacinas, fazer consultas em UBS, passar em prontos-socorros (UPA) e retirar medicamentos pelo SUS normalmente.",
+        "documentos": [
+            "Documento oficial de identificação com foto",
+            "CPF ou Cartão SUS (CNS)"
+        ],
+        "onde": "Unidade Básica de Saúde (UBS), UPA ou hospitais públicos da rede SUS",
+        "fonte": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/sus",
+        "verificado_em": "2026-11-14"
+    },
+    {
+        "id": 4,
+        "categoria": "Saúde",
+        "titulo": "Fazer ou consultar o Cartão SUS (Cartão de Saúde)",
+        "palavras_chave": [
+            "cartao sus",
+            "carteirinha sus",
+            "fazer sus",
+            "criar sus",
+            "tirar sus",
+            "numero sus",
+            "cns",
+            "cadastro sus"
+        ],
+        "resposta": "Você pode emitir ou consultar o número do seu Cartão SUS gratuitamente pelo aplicativo Meu SUS Digital (entrando com sua conta gov.br) ou presencialmente em qualquer Unidade Básica de Saúde (UBS) levando documento com foto e CPF.",
+        "documentos": [
+            "Documento oficial de identificação com foto",
+            "CPF"
+        ],
+        "onde": "Aplicativo Meu SUS Digital, site meususdigital.saude.gov.br ou qualquer UBS",
+        "fonte": "https://www.gov.br/saude/pt-br/acesso-a-informacao/acoes-e-programas/cns",
+        "verificado_em": "2026-11-14"
+    },
+    {
+        "id": 5,
+        "categoria": "Saúde",
+        "titulo": "Consultar carteira de vacinação digital pelo CPF",
+        "palavras_chave": [
+            "carteira vacinacao",
+            "vacina",
+            "historico vacinal",
+            "comprovante vacina",
+            "meu sus digital",
+            "sus vacina",
+            "tomar vacina"
+        ],
+        "resposta": "Sim! Todas as vacinas registradas no SUS ficam vinculadas ao seu CPF. Para consultar, acesse o aplicativo Meu SUS Digital (ou o site meususdigital.saude.gov.br) com sua conta gov.br, entre em 'Minha Saúde' e clique em 'Vacinas'.",
+        "documentos": [
+            "CPF",
+            "Conta gov.br"
+        ],
+        "onde": "Aplicativo Meu SUS Digital ou https://meususdigital.saude.gov.br",
+        "fonte": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/outubro/quer-consultar-suas-vacinas-saiba-como-acessar-a-carteira-de-vacinacao-pelo-meu-sus-digital/",
+        "verificado_em": "2026-11-14"
+    },
+    {
+        "id": 6,
+        "categoria": "Saúde",
+        "titulo": "Retirar medicamentos gratuitos ou com desconto na Farmácia Popular",
+        "palavras_chave": [
+            "farmacia popular",
+            "remedio gratuito",
+            "remedio de graca",
+            "pegar remedio",
+            "medicamento sus",
+            "receita medica"
+        ],
+        "resposta": "Pelo programa Farmácia Popular, é possível retirar gratuitamente medicamentos para hipertensão, diabetes, asma, osteoporose e anticoncepcionais, além de fraldas geriátricas e absorventes (para público elegível) com desconto ou gratuidade em farmácias credenciadas.",
+        "documentos": [
+            "Documento oficial com foto e número do CPF",
+            "Receita médica dentro do prazo de validade"
+        ],
+        "onde": "Farmácias privadas credenciadas com o selo 'Aqui Tem Farmácia Popular' ou UBS",
+        "fonte": "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular",
+        "verificado_em": "2026-11-14"
+    },
+    {
+        "id": 7,
+        "categoria": "Emprego",
+        "titulo": "Acessar ou criar a Carteira de Trabalho Digital",
+        "palavras_chave": [
+            "carteira de trabalho",
+            "carteira trabalho",
+            "ctps",
+            "criar carteira",
+            "tirar carteira",
+            "primeiro emprego",
+            "registro emprego"
+        ],
+        "resposta": "Não é mais necessário tirar carteira de trabalho em papel: a Carteira de Trabalho Digital já é gerada automaticamente para quem possui CPF. Para acessar, instale o app Carteira de Trabalho Digital ou entre no portal gov.br com seu CPF e senha.",
         "documentos": [
             "CPF",
             "Conta gov.br"
         ],
         "onde": "Aplicativo Carteira de Trabalho Digital ou https://www.gov.br/pt-br/servicos/obter-a-carteira-de-trabalho",
         "fonte": "https://www.gov.br/trabalho-e-emprego/pt-br/servicos/trabalhador/carteira-de-trabalho/perguntas-frequentes-carteira-de-trabalho-digital",
-        "verificado_em": "2026-11-09"
+        "verificado_em": "2026-11-14"
     },
     {
-        "id": 3,
+        "id": 8,
+        "categoria": "Emprego",
+        "titulo": "Solicitar o seguro-desemprego",
+        "palavras_chave": [
+            "seguro desemprego",
+            "fui demitido",
+            "demissao",
+            "beneficio desemprego",
+            "pedir seguro",
+            "dar entrada seguro"
+        ],
+        "resposta": "O seguro-desemprego pode ser solicitado online pelo Portal gov.br ou pelo aplicativo Carteira de Trabalho Digital. Você precisa ter o Requerimento do Seguro-Desemprego entregue pelo empregador e cumprir o prazo mínimo de trabalho exigido por lei.",
+        "documentos": [
+            "Requerimento do Seguro-Desemprego (fornecido pelo empregador)",
+            "CPF e conta gov.br"
+        ],
+        "onde": "Portal gov.br, aplicativo Carteira de Trabalho Digital ou telefone 158",
+        "fonte": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+        "verificado_em": "2026-11-14"
+    },
+    {
+        "id": 9,
+        "categoria": "Emprego",
+        "titulo": "Consultar saldo e saque do FGTS e PIS/PASEP",
+        "palavras_chave": [
+            "fgts",
+            "saldo fgts",
+            "sacar fgts",
+            "saque aniversario",
+            "pis",
+            "pasep",
+            "abono salarial"
+        ],
+        "resposta": "Você pode consultar o saldo do FGTS, escolher a modalidade de saque e acompanhar depósitos pelo aplicativo oficial FGTS da Caixa. Já o abono salarial PIS/PASEP pode ser consultado pelo aplicativo Carteira de Trabalho Digital ou pelo Caixa Tem.",
+        "documentos": [
+            "CPF",
+            "Conta gov.br ou cadastro no aplicativo FGTS"
+        ],
+        "onde": "Aplicativo FGTS, aplicativo Carteira de Trabalho Digital ou agências da Caixa",
+        "fonte": "https://www.gov.br/pt-br/servicos/consultar-o-fgts",
+        "verificado_em": "2026-11-14"
+    },
+    {
+        "id": 10,
+        "categoria": "Documentação",
+        "titulo": "Emitir a Carteira de Identidade Nacional (CIN / novo RG)",
+        "palavras_chave": [
+            "carteira identidade",
+            "nova identidade",
+            "novo rg",
+            "tirar rg",
+            "emitir rg",
+            "segunda via rg",
+            "cin",
+            "poupatempo"
+        ],
+        "resposta": "A nova Carteira de Identidade Nacional (CIN) usa o CPF como número único e é emitida pelos órgãos de identificação dos estados. Em São Paulo, o agendamento é feito pelo site ou app Poupatempo, e a primeira via da CIN é gratuita.",
+        "documentos": [
+            "Certidão de nascimento ou de casamento (original ou autenticada)",
+            "CPF regularizado"
+        ],
+        "onde": "Poupatempo (SP) ou Instituto de Identificação do estado",
+        "fonte": "https://www.gov.br/governodigital/pt-br/identidade/cin/duvidas-frequentes-sobre-a-cin-campanha",
+        "verificado_em": "2026-11-14"
+    },
+    {
+        "id": 11,
+        "categoria": "Documentação",
+        "titulo": "Emitir ou regularizar o CPF",
+        "palavras_chave": [
+            "tirar cpf",
+            "fazer cpf",
+            "emitir cpf",
+            "comprovante cpf",
+            "regularizar cpf",
+            "cpf suspenso",
+            "situacao cpf",
+            "receita federal"
+        ],
+        "resposta": "A inscrição ou emissão do comprovante de situação cadastral do CPF pode ser feita gratuitamente pela internet no site da Receita Federal. Caso haja pendência cadastral, o cidadão pode regularizar online ou em agências conveniadas (Banco do Brasil, Caixa ou Correios).",
+        "documentos": [
+            "Documento oficial de identificação com foto",
+            "Certidão de nascimento ou casamento",
+            "Título de eleitor (para maiores de 18 anos)"
+        ],
+        "onde": "Site da Receita Federal (servicos.receita.fazenda.gov.br) ou agências conveniadas",
+        "fonte": "https://www.gov.br/pt-br/servicos/inscrever-no-cpf",
+        "verificado_em": "2026-11-14"
+    },
+    {
+        "id": 12,
         "categoria": "Documentação",
         "titulo": "Solicitar o primeiro título de eleitor",
         "palavras_chave": [
             "primeiro titulo",
             "titulo de eleitor",
             "tirar titulo",
-            "alistamento eleitoral"
+            "fazer titulo",
+            "alistamento eleitoral",
+            "votar"
         ],
-        "resposta": "O primeiro título pode ser solicitado pelo Autoatendimento Eleitoral do TSE. Prepare documento oficial de identificação, comprovante de vínculo com o município e os arquivos solicitados pelo sistema. Pessoas do gênero masculino maiores de 18 anos devem observar a exigência de quitação militar.",
+        "resposta": "O primeiro título de eleitor pode ser pedido pela internet no Autoatendimento Eleitoral do TSE. Envie foto de documento oficial de identificação, comprovante de residência e uma selfie segurando o documento. Homens maiores de 18 anos também precisam do certificado de quitação militar.",
         "documentos": [
-            "Documento oficial de identificação",
+            "Documento oficial de identificação com foto",
             "Comprovante de vínculo com o município",
-            "Quitação militar, quando exigida"
+            "Comprovante de quitação militar (homens a partir de 18 anos)"
         ],
         "onde": "Autoatendimento Eleitoral do TSE ou cartório eleitoral da zona responsável",
         "fonte": "https://www.tse.jus.br/servicos-eleitorais/titulo-eleitoral/autoatendimento-eleitoral",
-        "verificado_em": "2026-11-09"
+        "verificado_em": "2026-11-14"
     },
     {
-        "id": 4,
+        "id": 13,
         "categoria": "Documentação",
-        "titulo": "Emitir a Carteira de Identidade Nacional (CIN)",
+        "titulo": "Consultar ou baixar o título eleitoral digital (e-Título)",
         "palavras_chave": [
-            "carteira identidade nacional",
-            "nova identidade",
-            "cin",
-            "emitir rg"
+            "titulo digital",
+            "e titulo",
+            "etitulo",
+            "baixar titulo",
+            "aplicativo titulo",
+            "local votacao"
         ],
-        "resposta": "A emissão da CIN é feita pelos órgãos de identificação dos estados e do Distrito Federal. Em São Paulo, consulte o canal estadual indicado no portal federal para verificar agendamento, locais e orientações atualizadas.",
+        "resposta": "Depois que o pedido do título for aprovado pela Justiça Eleitoral, a versão digital pode ser acessada gratuitamente no aplicativo e-Título. Nele também é possível consultar local de votação, emitir certidão de quitação e justificar ausência.",
         "documentos": [
-            "Certidão de nascimento ou de casamento"
+            "CPF e dados pessoais usados no cadastro eleitoral"
         ],
-        "onde": "Instituto de Identificação do estado; consulte o link oficial para localizar o agendamento de São Paulo",
-        "fonte": "https://www.gov.br/governodigital/pt-br/identidade/cin/duvidas-frequentes-sobre-a-cin-campanha",
-        "verificado_em": "2026-11-09"
+        "onde": "Aplicativo e-Título (Android e iOS) ou portal do TSE",
+        "fonte": "https://www.tse.jus.br/servicos-eleitorais/titulo-eleitoral/autoatendimento-eleitoral",
+        "verificado_em": "2026-11-14"
     },
     {
-        "id": 5,
-        "categoria": "Saúde",
-        "titulo": "Consultar a carteira de vacinação digital",
-        "palavras_chave": [
-            "carteira vacinacao",
-            "vacinas",
-            "historico vacinal",
-            "meu sus digital"
-        ],
-        "resposta": "Entre no aplicativo Meu SUS Digital ou no site oficial com sua conta gov.br. Abra 'Minha Saúde' e depois 'Vacinas' para consultar os registros disponíveis. Em 'Documentos', podem aparecer a carteira digital e certificados.",
-        "documentos": [
-            "Conta gov.br"
-        ],
-        "onde": "Aplicativo Meu SUS Digital ou https://meususdigital.saude.gov.br",
-        "fonte": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/outubro/quer-consultar-suas-vacinas-saiba-como-acessar-a-carteira-de-vacinacao-pelo-meu-sus-digital/",
-        "verificado_em": "2026-11-09"
-    },
-    {
-        "id": 6,
-        "categoria": "Emprego",
-        "titulo": "Solicitar o seguro-desemprego",
-        "palavras_chave": [
-            "seguro desemprego",
-            "fui demitido",
-            "beneficio desemprego",
-            "solicitar seguro"
-        ],
-        "resposta": "O pedido pode ser feito pelo Portal de Serviços ou pelo aplicativo Carteira de Trabalho Digital. É necessário ter o documento do Requerimento do Seguro-Desemprego fornecido pelo empregador e CPF. O direito depende do cumprimento dos requisitos legais.",
-        "documentos": [
-            "Documento do Requerimento do Seguro-Desemprego",
-            "CPF"
-        ],
-        "onde": "Portal gov.br ou aplicativo Carteira de Trabalho Digital; também há orientação pelo telefone 158",
-        "fonte": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
-        "verificado_em": "2026-11-09"
-    },
-    {
-        "id": 7,
+        "id": 14,
         "categoria": "Documentação",
         "titulo": "Realizar o alistamento militar obrigatório",
         "palavras_chave": [
             "alistamento militar",
             "servico militar",
             "exercito",
-            "junta militar"
+            "junta militar",
+            "reservista",
+            "alistar"
         ],
-        "resposta": "O alistamento pode ser iniciado pela internet no sistema oficial do Exército ou presencialmente na Junta de Serviço Militar. Consulte o calendário e as instruções oficiais para saber os documentos e etapas aplicáveis ao seu caso.",
+        "resposta": "Jovens do sexo masculino devem fazer o alistamento militar obrigatório no ano em que completam 18 anos (entre 1º de janeiro e 30 de junho). O cadastro inicial é feito online no site oficial do Exército ou presencialmente na Junta de Serviço Militar.",
         "documentos": [
-            "Documentos e informações solicitados pelo sistema oficial ou pela Junta de Serviço Militar"
+            "CPF",
+            "Certidão de nascimento ou documento oficial com foto",
+            "Comprovante de residência"
         ],
         "onde": "https://alistamento.eb.mil.br ou Junta de Serviço Militar mais próxima",
         "fonte": "https://www.gov.br/defesa/pt-br/carta-de-servico/servico-militar-obrigatorio-smo",
-        "verificado_em": "2026-11-09"
+        "verificado_em": "2026-11-14"
     },
     {
-        "id": 8,
+        "id": 15,
+        "categoria": "Documentação",
+        "titulo": "Solicitar a primeira habilitação (CNH) e CNH Digital",
+        "palavras_chave": [
+            "primeira habilitacao",
+            "tirar cnh",
+            "cnh digital",
+            "carteira motorista",
+            "auto escola",
+            "autoescola",
+            "detran"
+        ],
+        "resposta": "Para tirar a primeira CNH é necessário ter 18 anos completos, saber ler e escrever e possuir documento de identidade e CPF. O processo começa no Detran do estado (em SP, via Poupatempo/Detran-SP). Após aprovação, a versão digital fica disponível no app Carteira Digital de Trânsito.",
+        "documentos": [
+            "Documento oficial de identificação com foto",
+            "CPF",
+            "Comprovante de endereço recente"
+        ],
+        "onde": "Portal do Detran do estado (em SP, Poupatempo / Detran.SP) e aplicativo Carteira Digital de Trânsito",
+        "fonte": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/habilitacao",
+        "verificado_em": "2026-11-14"
+    },
+    {
+        "id": 16,
+        "categoria": "Documentação",
+        "titulo": "Solicitar emissão de passaporte brasileiro",
+        "palavras_chave": [
+            "passaporte",
+            "tirar passaporte",
+            "emitir passaporte",
+            "policia federal",
+            "viagem exterior",
+            "renovar passaporte"
+        ],
+        "resposta": "O pedido de passaporte é iniciado no portal da Polícia Federal com preenchimento do formulário online e pagamento da taxa (GRU). Depois, você agenda o atendimento presencial em um posto da Polícia Federal para coleta biométrica, foto e apresentação dos documentos.",
+        "documentos": [
+            "Documento oficial de identificação com foto",
+            "CPF",
+            "Certidão de quitação eleitoral e quitação militar (quando aplicável)",
+            "Passaporte anterior (se houver)"
+        ],
+        "onde": "Portal gov.br / Polícia Federal (https://www.gov.br/pt-br/servicos/obter-passaporte)",
+        "fonte": "https://www.gov.br/pt-br/servicos/obter-passaporte",
+        "verificado_em": "2026-11-14"
+    },
+    {
+        "id": 17,
         "categoria": "Direitos e serviços",
-        "titulo": "Fazer inscrição no Cadastro Único",
+        "titulo": "Registrar Boletim de Ocorrência (BO) por perda ou roubo de documentos",
+        "palavras_chave": [
+            "boletim de ocorrencia",
+            "perdi documento",
+            "documento perdido",
+            "documento roubado",
+            "fui roubado",
+            "furto",
+            "delegacia eletronica",
+            "registrar bo"
+        ],
+        "resposta": "Em caso de perda, furto ou roubo de documentos ou celular, registre imediatamente um Boletim de Ocorrência pela Delegacia Eletrônica do seu estado (em São Paulo, delegaciaeletronica.policiacivil.sp.gov.br) para evitar uso indevido do seu CPF e solicitar segundas vias.",
+        "documentos": [
+            "Dados pessoais (nome, CPF, endereço)",
+            "Relato do ocorrido e lista dos documentos perdidos/roubados"
+        ],
+        "onde": "Delegacia Eletrônica do estado ou delegacia da Polícia Civil mais próxima",
+        "fonte": "https://www.gov.br/pt-br/servicos/registrar-ocorrencia-policial",
+        "verificado_em": "2026-11-14"
+    },
+    {
+        "id": 18,
+        "categoria": "Direitos e serviços",
+        "titulo": "Fazer inscrição no Cadastro Único (CadÚnico)",
         "palavras_chave": [
             "cadastro unico",
             "cadunico",
+            "cad unico",
             "cras",
-            "programas sociais"
+            "programas sociais",
+            "bolsa familia",
+            "baixa renda",
+            "isencao taxa"
         ],
-        "resposta": "A inscrição no Cadastro Único é gratuita e presencial, em um posto municipal como o CRAS. A pessoa responsável pela família deve levar CPF de todas as pessoas da família e documento de identificação. Comprovante de residência é recomendado, se houver.",
+        "resposta": "A inscrição no Cadastro Único é gratuita e presencial em um posto municipal, como o CRAS. O responsável pela família deve levar documento com foto e o CPF de todos os moradores da casa para ter acesso a benefícios sociais e isenção de taxas em concursos e vestibulares.",
         "documentos": [
             "CPF de todas as pessoas da família",
-            "Documento de identificação",
-            "Comprovante de residência, se houver"
+            "Documento de identificação com foto do responsável",
+            "Comprovante de residência (recomendado)"
         ],
-        "onde": "CRAS ou posto de cadastramento do município",
+        "onde": "CRAS (Centro de Referência de Assistência Social) ou posto do CadÚnico do município",
         "fonte": "https://www.gov.br/mds/pt-br/acoes-e-programas/cadastro-unico/Cadastro-unico",
-        "verificado_em": "2026-11-09"
+        "verificado_em": "2026-11-14"
     },
     {
-        "id": 9,
+        "id": 19,
         "categoria": "Direitos e serviços",
         "titulo": "Registrar reclamação no Consumidor.gov.br",
         "palavras_chave": [
             "reclamacao compra",
-            "produto com defeito",
+            "produto defeito",
             "consumidor gov",
-            "problema empresa"
+            "problema empresa",
+            "reclamar empresa",
+            "direito consumidor",
+            "procon",
+            "estorno"
         ],
-        "resposta": "Acesse o Consumidor.gov.br com sua conta gov.br, confira se a empresa participa da plataforma, selecione-a e descreva o problema. Se possível, anexe nota fiscal, comprovante de pagamento, contrato ou protocolo. Depois acompanhe a resposta.",
+        "resposta": "Entre no portal Consumidor.gov.br com sua conta gov.br, confira se a empresa participa da plataforma, descreva o problema e anexe comprovantes. A empresa tem prazo de até 10 dias para responder diretamente pelo sistema.",
         "documentos": [
             "Conta gov.br",
-            "Comprovantes da compra ou contratação, se disponíveis"
+            "Nota fiscal, comprovante de pagamento, contrato ou protocolo"
         ],
         "onde": "https://www.consumidor.gov.br",
         "fonte": "https://www.gov.br/mj/pt-br/assuntos/noticias/consumidor-gov-br-saiba-como-registrar-uma-reclamacao-pela-plataforma",
-        "verificado_em": "2026-11-09"
+        "verificado_em": "2026-11-14"
     },
     {
-        "id": 10,
-        "categoria": "Documentação",
-        "titulo": "Consultar ou emitir o título eleitoral digital",
+        "id": 20,
+        "categoria": "Educação",
+        "titulo": "Inscrever-se no ENEM, SISU, Prouni ou Fies e emitir ID Estudantil",
         "palavras_chave": [
-            "titulo digital",
-            "aplicativo e titulo",
-            "e titulo",
-            "baixar titulo"
+            "inscricao enem",
+            "inscricao pro enem",
+            "fazer enem",
+            "enem",
+            "sisu",
+            "prouni",
+            "fies",
+            "bolsa faculdade",
+            "ensino superior",
+            "meia entrada",
+            "carteirinha estudante",
+            "id estudantil"
         ],
-        "resposta": "Depois que o pedido do título for analisado e processado, a versão digital pode ser acessada pelo aplicativo e-Título. O aplicativo também oferece serviços de consulta eleitoral.",
+        "resposta": "As inscrições para o ENEM são feitas na Página do Participante com conta gov.br dentro do cronograma oficial do INEP. Com a nota, é possível concorrer pelo SISU, Prouni ou Fies. Estudantes regularmente matriculados também podem solicitar a Carteira de Identificação Estudantil (CIE) para meia-entrada.",
         "documentos": [
-            "Dados de identificação usados no cadastro eleitoral"
+            "CPF",
+            "Conta gov.br",
+            "Comprovante de matrícula escolar ou universitária (para CIE)"
         ],
-        "onde": "Aplicativo e-Título ou portal do Tribunal Superior Eleitoral",
-        "fonte": "https://www.tse.jus.br/servicos-eleitorais/titulo-eleitoral/autoatendimento-eleitoral",
-        "verificado_em": "2026-11-09"
+        "onde": "Página do Participante (enem.inep.gov.br) e Portal Único de Acesso ao Ensino Superior (acessounico.mec.gov.br)",
+        "fonte": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem",
+        "verificado_em": "2026-11-14"
     }
 ]

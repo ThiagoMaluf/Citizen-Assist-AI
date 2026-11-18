@@ -19,4 +19,4 @@ class Orientacao:
         print("Onde:", self.onde)
         print("Fonte:", self.fonte)
         print("Verificado em:", self.verificado_em)
-        print("Aviso: este assistente não é um canal oficial.")
+        print("Aviso: este assistente NÃO é um canal oficial.")
